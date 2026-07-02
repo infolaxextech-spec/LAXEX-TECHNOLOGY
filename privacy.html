@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Laxex Technology</title>
+<meta name="description" content="Privacy Policy for Laxex Technology. We collect zero user data. Read how we handle your information." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:     #05060B;
+    --surf:   #0A0B14;
+    --surf2:  #10121F;
+    --ink:    #F2F4FB;
+    --muted:  #9098B5;
+    --dim:    #5A6184;
+    --cyan:   #5BD7F0;
+    --violet: #8E7BFF;
+    --pink:   #FF7AD9;
+    --line:   rgba(255,255,255,0.07);
+    --lineb:  rgba(255,255,255,0.15);
+    --glass:  rgba(255,255,255,0.035);
+    --grad:   linear-gradient(120deg,#5BD7F0 0%,#8E7BFF 55%,#FF7AD9 100%);
+    --r:      14px;
+    --max:    820px;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    background: radial-gradient(ellipse 100% 60% at 50% -10%, rgba(142,123,255,.10), transparent 70%),
+                linear-gradient(180deg,#05060B 0%,#0A0B14 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1,h2,h3 { font-family:'Space Grotesk',sans-serif; letter-spacing:-.02em; font-weight:600; }
+
+  /* NAV */
+  nav {
+    position: sticky; top:0; z-index:999;
+    padding: 16px 24px;
+    display: flex; justify-content: center;
+  }
+  .pill {
+    display: flex; align-items: center; gap:20px;
+    padding: 10px 20px 10px 14px;
+    border-radius: 999px;
+    background: rgba(10,11,20,.72);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .pill a { font-size:14px; color:var(--muted); transition:color .2s; white-space:nowrap; }
+  .pill a:hover { color:var(--ink); text-decoration:none; }
+  .pill a.active { color:var(--cyan); }
+  .pill .logo-text {
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;
+    background: var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; white-space:nowrap;
+  }
+
+  /* HERO */
+  .hero { max-width:var(--max); margin:64px auto 0; padding:0 24px; text-align:center; }
+  .badge {
+    display:inline-block; font-size:11px; font-weight:600; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--cyan);
+    border:1px solid rgba(91,215,240,.3); border-radius:999px;
+    padding:5px 16px; margin-bottom:20px;
+    background:rgba(91,215,240,.06);
+  }
+  .hero h1 {
+    font-size: clamp(28px,5vw,46px);
+    background:var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; margin-bottom:12px;
+  }
+  .hero p { color:var(--muted); font-size:14.5px; }
+  .hero p span { color:var(--dim); }
+
+  /* CONTENT */
+  .wrap { max-width:var(--max); margin:48px auto 80px; padding:0 24px; }
+
+  .card {
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:32px;
+    margin-bottom:16px;
+    transition:border-color .25s;
+  }
+  .card:hover { border-color:rgba(142,123,255,.22); }
+
+  .num { font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--violet); margin-bottom:8px; }
+  .card h2 { font-size:19px; margin-bottom:14px; }
+  .card p { color:var(--muted); font-size:14.5px; margin-bottom:12px; }
+  .card p:last-child { margin-bottom:0; }
+  .card ul { list-style:none; margin-top:8px; }
+  .card ul li {
+    color:var(--muted); font-size:14.5px;
+    padding:7px 0 7px 22px; position:relative;
+    border-bottom:1px solid var(--line);
+    line-height:1.65;
+  }
+  .card ul li:last-child { border-bottom:none; }
+  .card ul li::before { content:"→"; position:absolute; left:0; color:var(--cyan); font-size:13px; top:8px; }
+
+  .note {
+    background:rgba(91,215,240,.06);
+    border:1px solid rgba(91,215,240,.2);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:14px;
+    font-size:14px;
+    color:var(--cyan);
+    line-height:1.65;
+  }
+  .safe {
+    background:rgba(0,255,135,.05);
+    border:1px solid rgba(0,255,135,.2);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:14px;
+    font-size:14px;
+    color:#00FF87;
+    line-height:1.65;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top:1px solid var(--line);
+    padding:40px 24px 28px;
+    text-align:center;
+  }
+  .f-brand {
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; margin-bottom:16px; display:block;
+  }
+  .f-links { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:16px; }
+  .f-links a { font-size:13px; color:var(--dim); transition:color .2s; }
+  .f-links a:hover { color:var(--cyan); text-decoration:none; }
+  .f-links a.active { color:var(--cyan); }
+  .f-copy { font-size:12px; color:var(--dim); }
+
+  @media(max-width:600px) {
+    .card { padding:20px; }
+    .hero { margin-top:40px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="pill">
+    <a href="https://laxextech.com">
+      <span class="logo-text">LAXEX TECHNOLOGY</span>
+    </a>
+    <a href="https://laxextech.com">Home</a>
+    <a href="/terms.html">Terms &amp; Conditions</a>
+    <a href="/privacy.html" class="active">Privacy Policy</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p>Effective date: July 2, 2026 &nbsp;·&nbsp; Last updated: July 2, 2026 &nbsp;·&nbsp; <span>laxextech.com</span></p>
+  <p style="margin-top:8px;">We believe in full transparency. Here is exactly how we handle your information.</p>
+</section>
+
+<div class="wrap">
+
+  <!-- 01 -->
+  <div class="card">
+    <div class="num">01</div>
+    <h2>Introduction</h2>
+    <p>Laxex Technology ("we", "us", "our") is committed to protecting your privacy. This Privacy Policy explains how we handle any information you share with us when you visit <a href="https://laxextech.com">laxextech.com</a> or contact us for our services.</p>
+    <p>We are a digital agency based in Gujarat, India. We take your privacy seriously and have built our website in a way that collects as little data as possible.</p>
+    <div class="safe">✅ Short version — we collect zero data automatically. The only info we receive is what you voluntarily send us via WhatsApp.</div>
+  </div>
+
+  <!-- 02 -->
+  <div class="card">
+    <div class="num">02</div>
+    <h2>Information We Collect</h2>
+    <p>We do not run any backend server or database on this website. The only way we receive your information is when you voluntarily fill out our contact or enquiry form. That form does not store your data anywhere — it simply opens a pre-filled WhatsApp message that you send directly to us.</p>
+    <p>The information you may choose to share includes:</p>
+    <ul>
+      <li>Your name</li>
+      <li>Your phone number or email (if you mention it in your message)</li>
+      <li>Your project enquiry or message content</li>
+    </ul>
+  </div>
+
+  <!-- 03 -->
+  <div class="card">
+    <div class="num">03</div>
+    <h2>How We Use Your Information</h2>
+    <p>We use the information you send us only to:</p>
+    <ul>
+      <li>Respond to your enquiry promptly</li>
+      <li>Understand and discuss your project requirements</li>
+      <li>Send you a quotation or proposal</li>
+      <li>Follow up on an ongoing project or conversation</li>
+    </ul>
+    <p>We do not use your information for marketing, remarketing, or advertising purposes without your explicit consent.</p>
+  </div>
+
+  <!-- 04 -->
+  <div class="card">
+    <div class="num">04</div>
+    <h2>How We Do NOT Use Your Information</h2>
+    <p>We will never:</p>
+    <ul>
+      <li>Sell your personal information to anyone, ever</li>
+      <li>Share your data with third-party companies or advertisers</li>
+      <li>Store your information in any database or CRM without your knowledge</li>
+      <li>Send you unsolicited promotional messages or spam</li>
+      <li>Use your project details or business information for our own benefit</li>
+    </ul>
+    <div class="safe">✅ Your information stays between you and us — period.</div>
+  </div>
+
+  <!-- 05 -->
+  <div class="card">
+    <div class="num">05</div>
+    <h2>WhatsApp Communication</h2>
+    <p>When you contact us via our website form, your message is sent through WhatsApp directly to our business number. This means:</p>
+    <ul>
+      <li>Your message is governed by WhatsApp's own Privacy Policy — <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">whatsapp.com/legal/privacy-policy</a></li>
+      <li>We receive and read your message only on our WhatsApp account</li>
+      <li>WhatsApp uses end-to-end encryption, so your message is secure in transit</li>
+      <li>We do not screenshot, forward, or share your conversation without your permission</li>
+    </ul>
+    <div class="note">ℹ️ By using our contact form, you are choosing to initiate a WhatsApp conversation with us. We only respond — we never initiate unsolicited contact.</div>
+  </div>
+
+  <!-- 06 -->
+  <div class="card">
+    <div class="num">06</div>
+    <h2>Cookies &amp; Tracking</h2>
+    <p>Our website currently does not use:</p>
+    <ul>
+      <li>Cookies of any kind (session, persistent, or third-party)</li>
+      <li>Analytics tools such as Google Analytics or Hotjar</li>
+      <li>Meta Pixel, Google Ads tags, or any retargeting scripts</li>
+      <li>Tracking pixels or fingerprinting techniques</li>
+      <li>Any third-party advertising or data collection scripts</li>
+    </ul>
+    <div class="safe">✅ Your browsing on laxextech.com is completely untracked and anonymous.</div>
+  </div>
+
+  <!-- 07 -->
+  <div class="card">
+    <div class="num">07</div>
+    <h2>Third-Party Links</h2>
+    <p>Our website may contain links to third-party platforms such as Instagram, WhatsApp, or client project previews. We are not responsible for the privacy practices of those external websites.</p>
+    <ul>
+      <li>Instagram — <a href="https://privacycenter.instagram.com/policy" target="_blank">Instagram Privacy Policy</a></li>
+      <li>WhatsApp — <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">WhatsApp Privacy Policy</a></li>
+      <li>Google Fonts — used for typography only, no tracking</li>
+    </ul>
+    <p>We recommend reading the privacy policies of any external sites you visit from our website.</p>
+  </div>
+
+  <!-- 08 -->
+  <div class="card">
+    <div class="num">08</div>
+    <h2>Children's Privacy</h2>
+    <p>Our services are intended for businesses and individuals aged 18 and above. We do not knowingly collect any personal information from minors under the age of 18.</p>
+    <p>If you believe a minor has contacted us through our website, please notify us immediately at <a href="mailto:info.laxextech@gmail.com">info.laxextech@gmail.com</a> and we will delete that information right away.</p>
+  </div>
+
+  <!-- 09 -->
+  <div class="card">
+    <div class="num">09</div>
+    <h2>Data Security</h2>
+    <p>Since we do not store any user data on servers or databases, the risk of a data breach on our end is virtually zero. Here is how your data stays safe:</p>
+    <ul>
+      <li>Our website has no backend — no server processes or stores your form data</li>
+      <li>WhatsApp uses end-to-end encryption for all messages</li>
+      <li>All client project files shared with us are handled confidentially</li>
+      <li>We do not store client credentials, passwords, or payment card details</li>
+    </ul>
+    <div class="safe">✅ No database = no data breach risk from our side.</div>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <div class="num">10</div>
+    <h2>Your Rights</h2>
+    <p>Even though we collect minimal data, you have the following rights at all times:</p>
+    <ul>
+      <li>Right to know — ask us what information we have received from you</li>
+      <li>Right to deletion — request deletion of any conversation or data related to you</li>
+      <li>Right to opt out — stop follow-up communication from us at any time</li>
+      <li>Right to correction — ask us to correct any inaccurate information</li>
+    </ul>
+    <p>To exercise any of these rights, simply contact us via WhatsApp or email and we will respond within 48 hours.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <div class="num">11</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time as our services or legal requirements change. When we do:</p>
+    <ul>
+      <li>The latest version will always be available at <a href="https://www.laxextech.com">www.laxextech.com</a></li>
+      <li>The "Last Updated" date at the top of this page will reflect the change</li>
+      <li>Active clients will be notified of major changes via WhatsApp or email</li>
+      <li>Continued use of our website after changes means you accept the updated policy</li>
+    </ul>
+  </div>
+
+  <!-- 12 -->
+  <div class="card">
+    <div class="num">12</div>
+    <h2>Governing Law</h2>
+    <p>This Privacy Policy is governed by the laws of India, including the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023 (DPDP Act). Any disputes arising from this policy shall be subject to the exclusive jurisdiction of courts in Gujarat, India.</p>
+    <div class="note">📍 Jurisdiction: Gujarat, India &nbsp;·&nbsp; Applicable Law: IT Act 2000 + DPDP Act 2023</div>
+  </div>
+
+  <!-- 13 -->
+  <div class="card">
+    <div class="num">13</div>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out to us:</p>
+    <ul>
+      <li>Website: <a href="https://www.laxextech.com">www.laxextech.com</a></li>
+      <li>Email: <a href="mailto:info.laxextech@gmail.com">info.laxextech@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/917990411572">+91 79904 11572</a> (Ronak) / <a href="https://wa.me/917990373975">+91 79903 73975</a> (Kuldip)</li>
+      <li>Instagram: <a href="https://instagram.com/laxextech" target="_blank">@laxextech</a></li>
+      <li>Location: Gujarat, India</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <span class="f-brand">LAXEX TECHNOLOGY</span>
+  <div class="f-links">
+    <a href="https://laxextech.com">Home</a>
+    <a href="/terms.html">Terms &amp; Conditions</a>
+    <a href="/privacy.html" class="active">Privacy Policy</a>
+    <a href="/refund.html">Refund Policy</a>
+    <a href="mailto:info.laxextech@gmail.com">Contact</a>
+  </div>
+  <p class="f-copy">© 2026 Laxex Technology. All rights reserved. · Premier Digital Solutions</p>
+</footer>
+
+</body>
+</html>

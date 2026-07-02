@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms & Conditions — Laxex Technology</title>
+<meta name="description" content="Terms and Conditions for Laxex Technology — Premier Digital Solutions. Read before using our services." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:     #05060B;
+    --surf:   #0A0B14;
+    --surf2:  #10121F;
+    --ink:    #F2F4FB;
+    --muted:  #9098B5;
+    --dim:    #5A6184;
+    --cyan:   #5BD7F0;
+    --violet: #8E7BFF;
+    --pink:   #FF7AD9;
+    --line:   rgba(255,255,255,0.07);
+    --lineb:  rgba(255,255,255,0.15);
+    --glass:  rgba(255,255,255,0.035);
+    --grad:   linear-gradient(120deg,#5BD7F0 0%,#8E7BFF 55%,#FF7AD9 100%);
+    --r:      14px;
+    --max:    820px;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    background: radial-gradient(ellipse 100% 60% at 50% -10%, rgba(142,123,255,.10), transparent 70%),
+                linear-gradient(180deg,#05060B 0%,#0A0B14 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: var(--cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1,h2,h3 { font-family:'Space Grotesk',sans-serif; letter-spacing:-.02em; font-weight:600; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top:0; z-index:999;
+    padding: 16px 24px;
+    display: flex; justify-content: center;
+  }
+  .pill {
+    display: flex; align-items: center; gap:20px;
+    padding: 10px 20px 10px 14px;
+    border-radius: 999px;
+    background: rgba(10,11,20,.72);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .pill a { font-size:14px; color:var(--muted); transition:color .2s; white-space:nowrap; }
+  .pill a:hover { color:var(--ink); text-decoration:none; }
+  .pill a.active { color:var(--cyan); }
+  .pill .logo-text {
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;
+    background: var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; white-space:nowrap;
+  }
+
+  /* ── HERO ── */
+  .hero { max-width:var(--max); margin:64px auto 0; padding:0 24px; text-align:center; }
+  .badge {
+    display:inline-block; font-size:11px; font-weight:600; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--cyan);
+    border:1px solid rgba(91,215,240,.3); border-radius:999px;
+    padding:5px 16px; margin-bottom:20px;
+    background:rgba(91,215,240,.06);
+  }
+  .hero h1 {
+    font-size: clamp(28px,5vw,46px);
+    background:var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; margin-bottom:12px;
+  }
+  .hero p { color:var(--muted); font-size:14.5px; }
+  .hero p span { color:var(--dim); }
+
+  /* ── CONTENT ── */
+  .wrap { max-width:var(--max); margin:48px auto 80px; padding:0 24px; }
+
+  .card {
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:32px;
+    margin-bottom:16px;
+    transition:border-color .25s;
+  }
+  .card:hover { border-color:rgba(142,123,255,.22); }
+
+  .num { font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--violet); margin-bottom:8px; }
+  .card h2 { font-size:19px; margin-bottom:14px; }
+  .card p { color:var(--muted); font-size:14.5px; margin-bottom:12px; }
+  .card p:last-child { margin-bottom:0; }
+  .card ul { list-style:none; margin-top:8px; }
+  .card ul li {
+    color:var(--muted); font-size:14.5px;
+    padding:7px 0 7px 22px; position:relative;
+    border-bottom:1px solid var(--line);
+    line-height:1.65;
+  }
+  .card ul li:last-child { border-bottom:none; }
+  .card ul li::before { content:'→'; position:absolute; left:0; color:var(--cyan); font-size:13px; top:8px; }
+
+  .note {
+    background:rgba(91,215,240,.06);
+    border:1px solid rgba(91,215,240,.2);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:14px;
+    font-size:14px;
+    color:var(--cyan);
+    line-height:1.65;
+  }
+  .warn {
+    background:rgba(255,122,217,.05);
+    border:1px solid rgba(255,122,217,.2);
+    border-radius:10px;
+    padding:14px 18px;
+    margin-top:14px;
+    font-size:14px;
+    color:var(--pink);
+    line-height:1.65;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top:1px solid var(--line);
+    padding:40px 24px 28px;
+    text-align:center;
+  }
+  .f-brand {
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px;
+    background:var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; margin-bottom:16px; display:block;
+  }
+  .f-links { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:16px; }
+  .f-links a { font-size:13px; color:var(--dim); transition:color .2s; }
+  .f-links a:hover { color:var(--cyan); text-decoration:none; }
+  .f-links a.active { color:var(--cyan); }
+  .f-copy { font-size:12px; color:var(--dim); }
+
+  @media(max-width:600px) {
+    .card { padding:20px; }
+    .hero { margin-top:40px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="pill">
+    <a href="https://laxextech.com">
+      <span class="logo-text">LAXEX TECHNOLOGY</span>
+    </a>
+    <a href="https://laxextech.com">Home</a>
+    <a href="/terms.html" class="active">Terms &amp; Conditions</a>
+    <a href="/privacy.html">Privacy Policy</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">Legal</div>
+  <h1>Terms &amp; Conditions</h1>
+  <p>Effective date: July 2, 2026 &nbsp;·&nbsp; <span>laxextech.com</span></p>
+  <p style="margin-top:8px;">Please read these terms carefully before using our website or engaging our services.</p>
+</section>
+
+<div class="wrap">
+
+  <!-- 01 -->
+  <div class="card">
+    <div class="num">01</div>
+    <h2>Acceptance of Terms</h2>
+    <p>By accessing <strong>laxextech.com</strong> or engaging any service offered by Laxex Technology, you confirm that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+    <p>If you do not agree to these terms, please do not use our website or services. We reserve the right to update these terms at any time — continued use of our services constitutes your acceptance of any changes.</p>
+  </div>
+
+  <!-- 02 -->
+  <div class="card">
+    <div class="num">02</div>
+    <h2>About Laxex Technology</h2>
+    <p>Laxex Technology is a full-stack digital studio based in Gujarat, India, providing the following services:</p>
+    <ul>
+      <li>Website Design &amp; Development (React, WordPress, landing pages, e-commerce)</li>
+      <li>Video Editing — Reels, ad cuts, brand films</li>
+      <li>Branding — Logos, color systems, visual identity</li>
+      <li>Social Media Management — Content calendars, posting, community replies</li>
+      <li>Website Hosting — SSL, backups, uptime monitoring</li>
+      <li>Ad Management — Meta &amp; Google campaigns (strategy, creative, optimization)</li>
+    </ul>
+    <div class="note">Contact: info.laxextech@gmail.com &nbsp;|&nbsp; WhatsApp: +91 79904 11572 / +91 79903 73975</div>
+  </div>
+
+  <!-- 03 -->
+  <div class="card">
+    <div class="num">03</div>
+    <h2>Client Responsibilities</h2>
+    <p>As a client of Laxex Technology, you agree to:</p>
+    <ul>
+      <li>Provide accurate, complete, and timely information needed for project delivery</li>
+      <li>Respond to communications and revision requests within a reasonable time</li>
+      <li>Ensure all content, images, and materials you supply do not infringe third-party rights</li>
+      <li>Make payments as per the agreed schedule before delivery of final files</li>
+      <li>Not use our deliverables for any unlawful, harmful, or unethical purpose</li>
+    </ul>
+  </div>
+
+  <!-- 04 -->
+  <div class="card">
+    <div class="num">04</div>
+    <h2>Payments &amp; Pricing</h2>
+    <p>All pricing is agreed upon before project commencement. Our standard payment terms are:</p>
+    <ul>
+      <li>A minimum advance of <strong>50%</strong> is required before any work begins</li>
+      <li>Remaining balance is due upon project completion, before final file delivery</li>
+      <li>Hosting plans are billed annually as per the selected plan</li>
+      <li>All prices are in Indian Rupees (INR) unless stated otherwise</li>
+      <li>GST and applicable taxes will be added as per Indian law where applicable</li>
+      <li>Payments via UPI, bank transfer, or other mutually agreed methods</li>
+    </ul>
+    <p>Ad spend for Meta/Google campaigns is billed directly to your own account — Laxex Technology does not hold client ad budgets.</p>
+    <div class="warn">⚠️ Non-payment may result in suspension of services and withholding of all deliverables until dues are cleared.</div>
+  </div>
+
+  <!-- 05 -->
+  <div class="card">
+    <div class="num">05</div>
+    <h2>Refund Policy</h2>
+    <p>We are committed to quality. Our refund policy:</p>
+    <ul>
+      <li>Advance payments are non-refundable once project work has commenced</li>
+      <li>If Laxex Technology is unable to deliver the agreed service, a full refund of the advance will be issued</li>
+      <li>Refund requests must be raised within <strong>7 days</strong> of project delivery</li>
+      <li>Refunds are not applicable for completed and client-approved work</li>
+      <li>Hosting fees are non-refundable once the hosting period has started</li>
+      <li>Disputes are handled on a case-by-case basis at our reasonable discretion</li>
+    </ul>
+  </div>
+
+  <!-- 06 -->
+  <div class="card">
+    <div class="num">06</div>
+    <h2>Project Timelines</h2>
+    <p>Estimated timelines are shared at project kickoff and are provided in good faith. Delays may occur due to:</p>
+    <ul>
+      <li>Late supply of content, assets, or approvals from the client side</li>
+      <li>Scope changes or new requirements introduced mid-project</li>
+      <li>Force majeure or events beyond our reasonable control</li>
+    </ul>
+    <p>Standard timelines: Most websites are live within <strong>7–14 days</strong>. E-commerce and custom builds typically take <strong>3–4 weeks</strong>. We communicate proactively about any delays.</p>
+  </div>
+
+  <!-- 07 -->
+  <div class="card">
+    <div class="num">07</div>
+    <h2>Intellectual Property</h2>
+    <p>Upon full and final payment, all custom deliverables created for the client become the client's property. However:</p>
+    <ul>
+      <li>Laxex Technology retains the right to display completed work in our portfolio unless you request otherwise in writing</li>
+      <li>Third-party assets (stock images, fonts, plugins, frameworks) remain subject to their respective licenses</li>
+      <li>Source files may be provided at an additional cost unless explicitly agreed otherwise</li>
+      <li>Any designs, code, or concepts developed prior to project confirmation remain the property of Laxex Technology</li>
+      <li>Laxex Technology's brand name, logo, website content, and all internal tools are exclusively our intellectual property and may not be copied, reproduced, or used without written permission</li>
+      <li>If a project is terminated before completion, all work-in-progress remains the property of Laxex Technology until full outstanding payment is received</li>
+    </ul>
+    <div class="note">💡 After full payment: you own the final deliverables. Third-party assets (plugins, stock, fonts) are licensed — not owned — by you.</div>
+  </div>
+
+  <!-- 08 -->
+  <div class="card">
+    <div class="num">08</div>
+    <h2>Confidentiality</h2>
+    <p>Laxex Technology agrees to:</p>
+    <ul>
+      <li>Keep all client business information strictly confidential</li>
+      <li>Not share your data, strategy, or content with third parties without your written consent</li>
+      <li>Store sensitive information securely and delete it upon written request</li>
+    </ul>
+    <p>Clients also agree not to share any proprietary methods, pricing structures, or internal processes of Laxex Technology with third parties.</p>
+  </div>
+
+  <!-- 09 -->
+  <div class="card">
+    <div class="num">09</div>
+    <h2>Hosting Services</h2>
+    <p>Laxex Technology offers standalone hosting plans independent of project packages. Hosting terms:</p>
+    <ul>
+      <li>Hosting plans are billed annually (Starter ₹2,000/yr · Growth ₹3,500/yr · Enterprise on request)</li>
+      <li>SSL certificates, backups, and uptime monitoring are included as per plan</li>
+      <li>We are not liable for downtime caused by third-party infrastructure or DNS propagation delays</li>
+      <li>Clients must not host illegal, offensive, or copyright-infringing content</li>
+      <li>Failure to renew on time may result in service suspension and potential data loss</li>
+    </ul>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <div class="num">10</div>
+    <h2>Limitation of Liability</h2>
+    <p>Laxex Technology shall not be liable for any indirect, incidental, or consequential damages arising from our services, including but not limited to:</p>
+    <ul>
+      <li>Loss of business, revenue, or profits</li>
+      <li>Downtime or issues caused by third-party hosting, domain, or platform providers</li>
+      <li>Ad campaign performance or return on ad spend</li>
+      <li>Delays caused by client-side factors such as late content submission</li>
+    </ul>
+    <p>Our total liability shall not exceed the total amount paid by the client for the specific service in question.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <div class="num">11</div>
+    <h2>Termination</h2>
+    <p>Either party may terminate an ongoing project with written notice. Upon termination:</p>
+    <ul>
+      <li>The client will be invoiced for all work completed up to the termination date</li>
+      <li>Advance payments made are non-refundable for work already completed</li>
+      <li>Laxex Technology will hand over all completed deliverables upon receipt of outstanding dues</li>
+      <li>Hosting services will be terminated at the end of the paid billing cycle</li>
+    </ul>
+  </div>
+
+  <!-- 12 -->
+  <div class="card">
+    <div class="num">12</div>
+    <h2>Governing Law &amp; Jurisdiction</h2>
+    <p>These Terms and Conditions are governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of courts in Gujarat, India.</p>
+    <div class="note">📍 Jurisdiction: Gujarat, India &nbsp;·&nbsp; Governing Law: Indian Contract Act, 1872</div>
+  </div>
+
+  <!-- 13 -->
+  <div class="card">
+    <div class="num">13</div>
+    <h2>Acceptance of Website Use</h2>
+    <p>By accessing or browsing <strong>laxextech.com</strong>, you automatically agree to these Terms &amp; Conditions — even if you do not formally engage our services. This includes:</p>
+    <ul>
+      <li>Viewing our website or portfolio constitutes acceptance of these terms</li>
+      <li>Submitting an enquiry via our contact form or WhatsApp means you agree to be contacted by Laxex Technology</li>
+      <li>Engaging us for a project means you have read, understood, and accepted all terms on this page</li>
+      <li>If you disagree with any part of these terms, please stop using the website immediately</li>
+    </ul>
+    <div class="note">ℹ️ These terms apply to all visitors, enquirers, and paying clients of Laxex Technology.</div>
+  </div>
+
+  <!-- 14 -->
+  <div class="card">
+    <div class="num">14</div>
+    <h2>Effective Date &amp; Updates</h2>
+    <p>These Terms &amp; Conditions are effective from <strong>July 2, 2026</strong> and apply to all services rendered by Laxex Technology from this date onwards.</p>
+    <ul>
+      <li>Laxex Technology reserves the right to update or modify these terms at any time without prior notice</li>
+      <li>The latest version will always be available at <a href="https://www.laxextech.com">www.laxextech.com</a></li>
+      <li>Continued use of our website or services after an update means you accept the revised terms</li>
+      <li>For major changes affecting ongoing contracts, we will notify clients via WhatsApp or email</li>
+    </ul>
+  </div>
+
+  <!-- 15 -->
+  <div class="card">
+    <div class="num">15</div>
+    <h2>Contact Us</h2>
+    <p>For any questions about these Terms and Conditions, reach us through:</p>
+    <ul>
+      <li>Website: <a href="https://laxextech.com">laxextech.com</a></li>
+      <li>Email: <a href="mailto:info.laxextech@gmail.com">info.laxextech@gmail.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/917990411572">+91 79904 11572</a> (Ronak) / <a href="https://wa.me/917990373975">+91 79903 73975</a> (Kuldip)</li>
+      <li>Instagram: <a href="https://instagram.com/laxextech">@laxextech</a></li>
+      <li>Location: Gujarat, India</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <span class="f-brand">LAXEX TECHNOLOGY</span>
+  <div class="f-links">
+    <a href="https://laxextech.com">Home</a>
+    <a href="/terms.html" class="active">Terms &amp; Conditions</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/refund.html">Refund Policy</a>
+    <a href="mailto:info.laxextech@gmail.com">Contact</a>
+  </div>
+  <p class="f-copy">© 2026 Laxex Technology. All rights reserved. · Premier Digital Solutions</p>
+</footer>
+
+</body>
+</html>
