@@ -665,7 +665,11 @@ Gujarat
   }
   .cform textarea{resize:vertical; min-height:100px;}
   .cform .btn{margin-top:8px; width:100%; padding:14px;}
-  .form-note{font-size:12px; color:var(--muted-dim); text-align:center; margin-top:4px;}
+ .form-agree{display:flex; align-items:flex-start; gap:10px; margin:2px 0 4px;}
+  .form-agree input[type="checkbox"]{width:18px; height:18px; margin-top:2px; accent-color:var(--cyan); cursor:pointer; flex-shrink:0;}
+  .form-agree label{font-size:12.5px; color:var(--muted); line-height:1.5; cursor:pointer;}
+  .form-agree label a{color:var(--cyan);}
+  .form-agree label a:hover{text-decoration:underline;}
 
   /* ===== FOOTER ===== */
   footer{border-top:1px solid var(--line); padding:64px 0 30px;}
@@ -1344,6 +1348,10 @@ Gujarat
             <label for="cmsg">Project details</label>
             <textarea id="cmsg" placeholder="Tell us a bit about what you need..."></textarea>
           </div>
+         <div class="form-agree">
+            <input type="checkbox" id="cagree" required>
+            <label for="cagree">I agree to the <a href="/terms.html" target="_blank">Terms &amp; Conditions</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a>.</label>
+          </div>
           <button type="submit" class="btn btn-grad">Send via WhatsApp →</button>
           <p class="form-note">This opens WhatsApp with your details pre-filled — nothing is sent until you hit send there.</p>
         </form>
@@ -1482,8 +1490,14 @@ Gujarat
 
   // Contact form -> WhatsApp
   const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', (e) => {
+ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const agree = document.getElementById('cagree');
+    if (!agree.checked) {
+      alert('Please agree to the Terms & Conditions and Privacy Policy before sending your enquiry.');
+      agree.focus();
+      return;
+    }
     const name = document.getElementById('cname').value;
     const phone = document.getElementById('cphone').value;
     const email = document.getElementById('cemail').value;
@@ -1623,6 +1637,12 @@ Gujarat
   const contactForm = document.getElementById('contactForm');
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const agree = document.getElementById('cagree');
+    if (!agree.checked) {
+      alert('Please agree to the Terms & Conditions and Privacy Policy before sending your enquiry.');
+      agree.focus();
+      return;
+    }
     const name = document.getElementById('cname').value;
     const phone = document.getElementById('cphone').value;
     const email = document.getElementById('cemail').value;
