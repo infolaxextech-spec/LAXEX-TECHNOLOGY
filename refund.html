@@ -15,10 +15,28 @@
   body{background:radial-gradient(ellipse 100% 60% at 50% -10%,rgba(142,123,255,.10),transparent 70%),linear-gradient(180deg,#05060B 0%,#0A0B14 100%);background-attachment:fixed;color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:var(--cyan);text-decoration:none;} a:hover{text-decoration:underline;}
   h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;font-weight:600;}
-  nav{position:sticky;top:0;z-index:999;padding:16px 24px;display:flex;justify-content:center;}
-  .nav-inner{position:relative;width:100%;max-width:960px;}
-  .pill{display:flex;align-items:center;gap:16px;padding:8px 16px 8px 10px;border-radius:999px;background:rgba(10,11,20,.72);border:1px solid var(--line);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
-  .links{display:flex;align-items:center;gap:16px;margin-left:auto;}
+  nav {
+    position: sticky; top:0; z-index:999;
+    padding: 16px 24px;
+    display: flex; justify-content: center;
+  }
+  .pill {
+    display: flex; align-items: center; gap:20px;
+    padding: 10px 20px 10px 14px;
+    border-radius: 999px;
+    background: rgba(10,11,20,.72);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .pill a { font-size:14px; color:var(--muted); transition:color .2s; white-space:nowrap; }
+  .pill a:hover { color:var(--ink); text-decoration:none; }
+  .pill a.active { color:var(--cyan); }
+  .pill .logo-text {
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px;
+    background: var(--grad); -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent; white-space:nowrap;
+  } .links{display:flex;align-items:center;gap:16px;margin-left:auto;}
   .links a{font-size:13.5px;color:var(--muted);transition:color .2s;white-space:nowrap;text-decoration:none;}
   .links a:hover{color:var(--ink);}
   .links a.active{color:var(--cyan);}
