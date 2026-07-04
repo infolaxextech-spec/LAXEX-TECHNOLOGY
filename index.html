@@ -313,10 +313,7 @@ Gujarat
   .mobile-menu a{padding:13px 14px; border-radius:12px; font-size:15px; color:var(--ink); font-weight:500;}
   .mobile-menu a:hover{background:rgba(255,255,255,0.06);}
   .mobile-menu .btn{margin-top:8px;}
-@media(max-width:860px){
-  nav.links{display:none;}
-  .nav-cta .btn-ghost{display:none;}
-  .nav-toggle{display:flex;}
+
 }
   /* ===== HERO ===== */
   .hero{
@@ -1718,11 +1715,6 @@ Gujarat
 })();
 
 </script>
-  <script>
-  const t=document.getElementById('navToggle');
-  const m=document.getElementById('mobileMenu');
-  t.addEventListener('click',()=>{t.classList.toggle('open');m.classList.toggle('show');});
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');m.classList.remove('show');}));
-</script>
+ 
 </body>
 </html>
