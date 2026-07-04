@@ -1714,5 +1714,11 @@ Gujarat
 })();
 
 </script>
+  <script>
+  const t=document.getElementById('navToggle');
+  const m=document.getElementById('mobileMenu');
+  t.addEventListener('click',()=>{t.classList.toggle('open');m.classList.toggle('show');});
+  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.classList.remove('open');m.classList.remove('show');}));
+</script>
 </body>
 </html>
